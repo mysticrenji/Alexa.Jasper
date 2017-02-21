@@ -1,0 +1,5 @@
+Device ID : RaspEcho
+
+ClientID : amzn1.application-oa2-client.21bc098020504e1f85d85f79304257e0
+
+Client Secret : bfe6b47c109598386ab190fcddae1cc5d112cf2ee56abfdda11b51d356c84c28
