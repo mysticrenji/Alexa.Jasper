@@ -1,0 +1,12 @@
+http://www.knight-of-pi.org/jasper-manual-installation-on-a-raspberry-pi-2-and-raspbian-jessie/
+
+http://www.oodlestechnologies.com/blogs/Record-Audio-on-Raspberry-Pi-3-using-audio-sound-card
+
+YANDEX_DICT : dict.1.1.20170216T131619Z.12b7f3b824b66066.c42cdefd6b6eb66e2b0bdd492e9f39263fd3255a
+
+
+OpenWeatherMap:
+   api_key: '3e597e1dceeca77884e1289ba0af5d19'
+   city_name: 'Singapore'
+   country: 'SG'
+   temp_unit: 'celsius'
