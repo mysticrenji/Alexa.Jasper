@@ -1,0 +1,5 @@
+/usr/local/bin/mjpg_streamer -i "/usr/local/lib/input_uvc.so" -o "/usr/local/lib/output_http.so -w /usr/local/www -p 80" 
+
+sudo ./mjpg_streamer -i "./input_uvc.so -d /dev/video0 -n -y f 15 -r 320x240" -o "./output_http.so -n -w /usr/local/www -p 82"
+
+sudo /usr/local/bin/mjpg_streamer -i "/usr/local/lib/input_uvc.so -f 30 -y" -o "/usr/local/lib/output_http.so -w /usr/local/www -p 80 -c mysticrenji:Sayonara!1"

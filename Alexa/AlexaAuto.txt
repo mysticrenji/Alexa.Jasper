@@ -1,0 +1,22 @@
+
+To run the demo, do the following in 3 seperate terminals:
+Run the companion service: cd /home/pi/AlexaHeadless/alexa-avs-sample-app/samples/companionService && npm start
+Run the AVS Java Client: cd /home/pi/AlexaHeadless/alexa-avs-sample-app/samples/javaclient && mvn exec:exec
+Run the wake word agent:
+  Sensory: cd /home/pi/AlexaHeadless/alexa-avs-sample-app/samples/wakeWordAgent/src && ./wakeWordAgent -e sensory
+  KITT_AI: cd /home/pi/AlexaHeadless/alexa-avs-sample-app/samples/wakeWordAgent/src && ./wakeWordAgent -e kitt_ai
+  GPIO: PLEASE NOTE -- If using this option, run the wake word agent as sudo:
+  cd /home/pi/AlexaHeadless/alexa-avs-sample-app/samples/wakeWordAgent/src && sudo ./wakeWordAgent -e gpio
+pi@raspberrypi:~/AlexaHeadless/alexa-avs-sample-app/samples/wakeWordAgent/tst $
+
+https://github.com/SamuelBrucksch/alexa-avs-sample-app/
+https://github.com/alexa/alexa-avs-sample-app/pull/431
+
+ "sessionId":"5c53e2d0-b695-4e2f-be01-34ad3e3b1909"
+
+To run the demo, do the following in 3 seperate terminals:
+Run the companion service: cd /home/pi/Alexa/alexa-avs-sample-app/samples/companionService && npm start
+Run the AVS Java Client: cd /home/pi/Alexa/alexa-avs-sample-app/samples/javaclient && mvn exec:exec
+Run the wake word agent:
+  Sensory: cd /home/pi/Alexa/alexa-avs-sample-app/samples/wakeWordAgent/src && ./wakeWordAgent -e sensory
+  KITT_AI: cd /home/pi/Alexa/alexa-avs-sample-app/samples/wakeWordAgent/src && ./wakeWordAgent -e kitt_ai
