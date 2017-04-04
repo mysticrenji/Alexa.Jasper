@@ -1,0 +1,65 @@
+{
+    "Comment": "Process incoming image files to find out if an email warning is required",
+    "StartAt": "rekognition-image-assessment",
+    "States": {
+
+        "nodemailer-error-handler": {
+            "Type": "Task",
+            "Resource": "arn:aws:lambda:us-west-2:829108114048:function:nodemailer-error-handler",
+            "End": true
+        },
+        "rekognition-image-assessment": {
+            "Type": "Task",
+            "Resource": "arn:aws:lambda:us-west-2:829108114048:function:rekognition-image-assessment",
+            "Catch": [{
+                "ErrorEquals": ["States.ALL"],
+                "Next": "nodemailer-error-handler"
+            }],
+            "Next": "evaluate-rekognition-labels"
+        },
+        "evaluate-rekognition-labels": {
+            "Type": "Task",
+            "Resource": "arn:aws:lambda:us-west-2:829108114048:function:evaluate-rekognition-labels",
+            "Catch": [{
+                "ErrorEquals": ["States.ALL"],
+                "Next": "nodemailer-error-handler"
+            }],
+            "Next": "make-alert-decision"
+        },
+
+        "make-alert-decision": {
+            "Type": "Choice",
+            "Choices": [{
+                    "Variable": "$.Alert",
+                    "StringEquals": "true",
+                    "Next": "s3nodenotification"
+                },
+                {
+                    "Variable": "$.Alert",
+                    "StringEquals": "false",
+                    "Next": "s3-archive-image"
+                }
+            ],
+            "Default": "s3-archive-image"
+        },
+
+        "s3nodenotification": {
+            "Type": "Task",
+            "Resource": "arn:aws:lambda:us-west-2:829108114048:function:s3nodenotification",
+            "Catch": [{
+                "ErrorEquals": ["States.ALL"],
+                "Next": "nodemailer-error-handler"
+            }],
+            "Next": "s3-archive-image"
+        },
+        "s3-archive-image": {
+            "Type": "Task",
+            "Resource": "arn:aws:lambda:us-west-2:829108114048:function:s3-archive-image",
+            "Catch": [{
+                "ErrorEquals": ["States.ALL"],
+                "Next": "nodemailer-error-handler"
+            }],
+            "End": true
+        }
+    }
+}

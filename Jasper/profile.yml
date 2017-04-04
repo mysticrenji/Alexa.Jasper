@@ -1,0 +1,30 @@
+carrier: ''
+first_name: Renjith
+gmail_address: sorry
+gmail_password: sorry
+last_name: Ravindranathan
+location: SG
+phone_number: ''
+prefers_email: true
+stt_engine: witai
+witai-stt:
+   access_token: 2FZAQZYEOIMITBFP5F3Q2QCF2E53I4V4
+#stt_engine: google
+#keys:
+#    GOOGLE_SPEECH: AIzaSyADbQ76q_s75kPuqe7UaCFAF8_DCdhqagw
+tts_engine: espeak-tts
+espeak-tts:
+  voice: 'default+m2'   # optional
+  pitch_adjustment: 40  # optional
+  words_per_minute: 160 # optional
+timezone: Asia/Singapore
+wmo_id: 48698
+YANDEX_DICT : dict.1.1.20170216T131619Z.12b7f3b824b66066.c42cdefd6b6eb66e2b0bdd492e9f39263fd3255a
+OpenWeatherMap:
+   api_key: '3e597e1dceeca77884e1289ba0af5d19'
+   city_name: 'Singapore'
+   country: 'SG'
+   temp_unit: 'celsius'
+input_device: usb-pnp-sound-device-audio
+audio:
+    input_samplerate: 44100   

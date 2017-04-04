@@ -1,0 +1,6 @@
+  Client_ID: amzn1.application-oa2-client.e721399087fe4445bb28ef17d5dcbc74
+  Client_Secret: bb5c75e5d1a361a1c84b819d9c7b00d89565157723033a6258a6b7b7b7c44c26
+  Device_Type_ID: pi
+  Security_Profile_Description: pi
+  Security_Profile_ID: amzn1.application.4a1336169aaa485b9651e3f07c89806b
+  refresh_token:
